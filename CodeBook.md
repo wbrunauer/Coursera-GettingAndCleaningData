@@ -1,8 +1,8 @@
 ==================================================================
 Codebook - Getting and Cleaning Data Project, Coursera
-Version 1.0
 ==================================================================
-Wolfgang Brunauer
+## Version 1.0
+(c) Wolfgang Brunauer
 
 ## Source
 This code book builds on the information provided on [this site] (http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones) by the [UC Irvine Machine Learning Repository](http://archive.ics.uci.edu/ml/index.html). The data can be downloaded via [this link:](https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip).
@@ -81,7 +81,7 @@ For example, feature 'tBodyGyroJerkMag-mean()' consists of prefix 't', Body(1) '
 Note that there is an obvious mistake in labelling, where "Body" appears twice, e.g. in 'fBodyBodyAccJerkMag-mean()'.
 
 ### Transformed feature labels for tidy data
-In order to increase readability, the feature labels were transformed and permuted (the function applied was put to the front). 
+In order to increase readability, the feature labels were transformed and permuted (the function applied was put to the front). Special characters are removed. 
 - Prefix (1): The function applied on the signals (corresponds to suffix(1) above); brackets are removed.
 - Prefix (2): 
   - 'Time' (for time) 
@@ -92,7 +92,7 @@ In order to increase readability, the feature labels were transformed and permut
   - 'AngularVelocity'
   - 'JerkSignal'              
   - 'Magnitude'
-- Suffix: 
+- Suffix: directions:
   - 'dirX'
   - 'dirY'
   - 'dirZ'

@@ -21,11 +21,11 @@
 # dplyr for question 5
 library(dplyr)
 
-# Create and set working directory 
-if (!file.exists("C:/R/work/course_3/project")) {
-        dir.create("C:/R/work/course_3/project")
-}
-setwd("C:/R/work/course_3/project")
+# # Create and set working directory 
+# if (!file.exists("C:/R/work/course_3/project")) {
+#         dir.create("C:/R/work/course_3/project")
+# }
+# setwd("C:/R/work/course_3/project")
 
 #############################################
 ## Downloading data from the web, unzip
@@ -138,7 +138,7 @@ names(runLabel) <- feature_names_informative
 #############################################
 # with the average of each variable for each activity and each subject.
 
-# Use the dplyr Package
+# Use the dplyr package
 # Step 1: group by subject and activity label
 # Step 2: use the summarise_each function
 runMeans <- runLabel %>% 
