@@ -3,7 +3,6 @@ Codebook - Getting and Cleaning Data Project, Coursera
 Version 1.0
 ==================================================================
 Wolfgang Brunauer
-==================================================================
 
 ## Source
 This code book builds on the information provided on [this site] (http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones) by the [UC Irvine Machine Learning Repository](http://archive.ics.uci.edu/ml/index.html). The data can be downloaded via [this link:](https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip).
@@ -47,34 +46,34 @@ The original feature labels are constituted as follows (suqared brackets do not 
 [Prefix][Body: first part][Body: second part (optional)][Body: third part (optional)]-[Suffix: first part]-[Suffix: second part (optional)]
 
 - Prefix: 
-..- 't' (for time) 
-..- 'f' (for frequency domain signals)
+  - 't' (for time) 
+  - 'f' (for frequency domain signals)
 - Body: first part 
-..- BodyAcc: BodyAcceleration
-..- GravityAcc: GravityAcceleration   
-..- BodyGyro: GravityAcceleration
+  - BodyAcc: BodyAcceleration
+  - GravityAcc: GravityAcceleration   
+  - BodyGyro: GravityAcceleration
 - Body: second part (optional) 
-..- Jerk: Jerk Signal              
+  - Jerk: Jerk Signal              
 - Body: third part (optional - with or without second part)
-..- Mag: Magnitude
+  - Mag: Magnitude
 - Suffix: first part, describing the functions applied on the signals. These are:
-..- mean(): Mean value
-..- std(): Standard deviation
-..- mad(): Median absolute deviation 
-..- max(): Largest value in array
-..- min(): Smallest value in array
-..- sma(): Signal magnitude area
-..- energy(): Energy measure. Sum of the squares divided by the number of values. 
-..- iqr(): Interquartile range 
-..- entropy(): Signal entropy
-..- arCoeff(): Autorregresion coefficients with Burg order equal to 4
-..- correlation(): correlation coefficient between two signals
-..- maxInds(): index of the frequency component with largest magnitude
-..- meanFreq(): Weighted average of the frequency components to obtain a mean frequency
-..- skewness(): skewness of the frequency domain signal 
-..- kurtosis(): kurtosis of the frequency domain signal 
-..- bandsEnergy(): Energy of a frequency interval within the 64 bins of the FFT of each window.
-..- angle(): Angle between to vectors. 
+  - mean(): Mean value
+  - std(): Standard deviation
+  - mad(): Median absolute deviation 
+  - max(): Largest value in array
+  - min(): Smallest value in array
+  - sma(): Signal magnitude area
+  - energy(): Energy measure. Sum of the squares divided by the number of values. 
+  - iqr(): Interquartile range 
+  - entropy(): Signal entropy
+  - arCoeff(): Autorregresion coefficients with Burg order equal to 4
+  - correlation(): correlation coefficient between two signals
+  - maxInds(): index of the frequency component with largest magnitude
+  - meanFreq(): Weighted average of the frequency components to obtain a mean frequency
+  - skewness(): skewness of the frequency domain signal 
+  - kurtosis(): kurtosis of the frequency domain signal 
+  - bandsEnergy(): Energy of a frequency interval within the 64 bins of the FFT of each window.
+  - angle(): Angle between to vectors. 
 - Suffix: second part (optional), describing 3-axial signals in the X, Y and Z directions 
 
 For example, feature 'tBodyGyroJerkMag-mean()' consists of prefix 't', Body(1) 'BodyGyro', Body(2) 'Jerk', Body (3) <NA>, Suffix(1) 'mean()', Suffix(2) <NA>
@@ -85,18 +84,18 @@ Note that there is an obvious mistake in labelling, where "Body" appears twice, 
 In order to increase readability, the feature labels were transformed and permuted (the function applied was put to the front). 
 - Prefix (1): The function applied on the signals (corresponds to suffix(1) above); brackets are removed.
 - Prefix (2): 
-..- 'Time' (for time) 
-..- 'FrequencyDomainSignals' (for frequency domain signals)
+  - 'Time' (for time) 
+  - 'FrequencyDomainSignals' (for frequency domain signals)
 - Body (1), (2) and (3): "written out" to be self-explanatory, resulting in:
-..- 'BodyAcceleration'
-..- 'GravityAcceleration'   
-..- 'AngularVelocity'
-..- 'JerkSignal'              
-..- 'Magnitude'
+  - 'BodyAcceleration'
+  - 'GravityAcceleration'   
+  - 'AngularVelocity'
+  - 'JerkSignal'              
+  - 'Magnitude'
 - Suffix: 
-..- 'dirX'
-..- 'dirY'
-..- 'dirZ'
+  - 'dirX'
+  - 'dirY'
+  - 'dirZ'
 
 For the example above, this results in Prefix (1) 'mean', Prefix (2) 'Time', Body(1) 'AngularVelocity', Body(2) 'JerkSignal', Body (3) <NA>, Suffix <NA>, i.e.: meanTimeBodyAngularVelocityJerkSignal
 
@@ -104,12 +103,12 @@ For the example above, this results in Prefix (1) 'mean', Prefix (2) 'Time', Bod
 The measurements are identified by two ID variables:
 - subject: one of 30 volunteers, range 1,...,30.
 - activityLabel: one of 5 activities
-..- 1 WALKING
-..- 2 WALKING_UPSTAIRS
-..- 3 WALKING_DOWNSTAIRS
-..- 4 SITTING
-..- 5 STANDING
-..- 6 LAYING
+  - 1 WALKING
+  - 2 WALKING_UPSTAIRS
+  - 3 WALKING_DOWNSTAIRS
+  - 4 SITTING
+  - 5 STANDING
+  - 6 LAYING
 
 ### Meaurement units:
 Features are normalized and bounded within [-1,1].
