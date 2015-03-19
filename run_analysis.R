@@ -143,7 +143,7 @@ names(runLabel) <- feature_names_informative
 # Step 2: use the summarise_each function
 runMeans <- runLabel %>% 
                 group_by(subject,activityLabel) %>% 
-                        summarise_each(funs(mean))
+                        summarise_each(funs(mean(., na.rm=T)))
 
 
 #############################################
